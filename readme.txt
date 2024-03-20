@@ -1,0 +1,3 @@
+In wdl cohort_candidates.wdl variant_calling.wdl
+
+chip_parsing_crossectional.py/chip_parsing_longitudinal.py/chip_cfg.py - Read the VCF file obtained as result of executing wdl/cohort_candidates.wdl and generate a list of somatic mutations to be manually curated. config.ini - some definitios used by python scripts TargetPanel.py/TargetPanelDBConnector.py/TargetPanelMySQLConnector.py - classes about gene panel (used in main python scripts)

@@ -1,0 +1,104 @@
+{
+	"##_COMMENT_1": "EXECUCION",
+	"sort_by_query": {
+		"cpu": 2,
+		"memory": "16 G",
+		"java_args_sort_by_query": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=0 -XX:ParallelGCThreads=2 -Xmx12g"
+	},
+	"uBAM_2_mappedBAM": {
+		"cpu": 11,
+		"memory": "31 G",
+		"java_args_SamToFastq": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=0 -XX:ParallelGCThreads=2 -Xmx2500m",
+		"java_args_MergeBamAlignment": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=0 -XX:ParallelGCThreads=2 -Xmx2500m"
+	},
+	"MarkDuplicates": {
+		"cpu": 11,
+		"memory": "31 G",
+		"java_args_MarkDuplicates": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=0 -XX:ParallelGCThreads=2 -Xmx16g"
+	},
+	"GroupReadsByUmi": {
+		"cpu": 2,
+		"memory": "16 G",
+		"java_args_GroupReadsByUmi": "-Xmx8g",
+		"grouping_strategy": "adjacency",
+		"edit_distance": 1
+	},
+	"TemplateSortBam": {
+		"cpu": 4,
+		"memory": "11 G",
+		"java_args_SortBam": "-XX:ParallelGCThreads=2"
+	},
+	"CallMolecularConsensusReads": {
+		"cpu": 6,
+		"memory": "16 G",
+		"java_args_CallMolecularConsensusReads": "-XX:ParallelGCThreads=4"
+	},
+	"mapping": {
+		"cpu": 11,
+		"memory": "31 G",
+		"java_args_SamToFastq": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=0 -XX:ParallelGCThreads=2 -Xmx4000m",
+		"java_args_MergeBamAlignment": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -Dsamjdk.compression_level=0 -XX:ParallelGCThreads=2 -Xmx4000m"
+	},
+	"FilterConsensusReads": {
+		"cpu": 4,
+		"memory": "11 G",
+		"java_args_FilterConsensusReads": "-XX:ParallelGCThreads=2",
+		"supporting_min_reads": 1,
+		"supporting_min_base_quality": 10,
+		"reverse_per_base_tags": "true",
+		"require_single_strand_agreement": "true"
+	},
+	"ClipBam": {
+		"cpu": 4,
+		"memory": "11 G",
+		"java_args_ClipBam": "-XX:ParallelGCThreads=2",
+		"clip_overlapping_reads": "true",
+		"clipping_mode": "SoftWithMask"
+	},
+	"BAM_flagstat": {
+		"cpu": 2,
+		"memory": "10 G"
+	},
+	"getBarcodes": {
+		"cpu": 2,
+		"memory": "10 G"
+	},
+	"QualityScoreDistribution": {
+		"cpu": 2,
+		"memory": "8 G",
+		"java_args_QualityScoreDistribution": "-XX:ParallelGCThreads=2"
+	},
+	"CollectHsMetrics": {
+		"cpu": 2,
+		"memory": "10 G",
+		"java_args_CollectHsMetrics": "-XX:ParallelGCThreads=2",
+		"covarage_cap": 15000
+	},
+	"SomaticVC": {
+		"cpu": 4,
+		"memory": "32 G",
+		"java_args_SomaticVC": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -XX:ParallelGCThreads=2 -Xmx16g",
+		"java_args_FilterMutectCalls": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -XX:ParallelGCThreads=2 -Xmx5g"
+	},
+	"GerminalVC": {
+		"cpu": 4,
+		"memory": "32 G",
+		"java_args_GerminalVC": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -XX:ParallelGCThreads=2 -Xmx16g"
+	},
+	"create_gVCF" : {
+		"cpu" : 6,
+		"memory" : "16 G",
+		"java_args_HaplotypeCaller" : "-Dsamjdk.compression_level=0 -XX:+UseParallelGC -XX:ParallelGCThreads=4 -Xmx8g",
+		"gatk_gkl_pairhmm_implementation": "FASTEST_AVAILABLE",
+		"gatk_gkl_pairhmm_threads": 6,
+		"smith_waterman_implementation": "FASTEST_AVAILABLE"
+	},
+	"Bam2Cram": {
+		"cpu": 1,
+		"memory": "8 G"
+	},
+	"normalize_VCF": {
+		"cpu": 3,
+		"memory": "8 G"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"genome_metadata":	"/data3/Project_JFuster_DNA_Seq/REFERENCES/BROAD_hg38_v0.json",
+	
+	"##_COMMENT_1": "EXECUCION",
+	"FilterMutectCalls": {
+		"cpu": 4,
+		"memory": "10 G",
+		"java_args_FilterMutectCalls": "-Dsamjdk.use_async_io_read_samtools=false -Dsamjdk.use_async_io_write_samtools=false -Dsamjdk.use_async_io_write_tribble=false -XX:ParallelGCThreads=2 -Xmx5g"
+	},
+	"merge_VCF": {
+		"cpu": 3,
+		"memory": "16 G"
+	},
+	"normalize_VCF": {
+		"cpu": 3,
+		"memory": "16 G"
+	},
+	"annotate_VCF": {
+		"cpu": 8,
+		"memory": "32 G",
+		"cache_version": 105,
+		"cache_dir": "/data3/genomes/homo_sapiens/annotations/VEP",
+		"plugins_dir": "/data3/genomes/homo_sapiens/annotations/VEP/Plugins/release_105",
+		"CADD": "/data3/genomes/homo_sapiens/annotations/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz",
+		"dbNSFP": "/data3/genomes/Homo_sapiens/annotations/dbNSFP/dbNSFP/dbNSFP4.3a_grch38.gz,ALL"
+	}
+}
