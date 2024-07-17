@@ -6,7 +6,7 @@ Based on the instructions detailed in that paper, we built a masked genome for t
 
 1.- [Get GATK Resource Bundle for GRCh38](https://gatk.broadinstitute.org/hc/en-us/articles/360035890811-Resource-bundle)
 
-2.- [Get region to mask from NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_GRC_exclusions.bed)
+2.- [Get regions to mask from NCBI](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_GRC_exclusions.bed)
 
 3.- Use __bedtools maskfasta__ to mask the fasta file from the GATK Bundle using the .bed file with the regions to be masked
 
